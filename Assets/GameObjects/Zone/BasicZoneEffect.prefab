@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3666256084720032487}
   - component: {fileID: 670175543092972022}
   m_Layer: 0
-  m_Name: ZoneEffect
+  m_Name: BasicZoneEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
