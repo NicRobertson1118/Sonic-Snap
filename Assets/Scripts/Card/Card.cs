@@ -115,7 +115,9 @@ public class Card : MonoBehaviour
 
     public virtual void onReveal() {}
 
-    public virtual void onGoing() {}
+    public virtual void onGoing() {
+        removePowerMods(cardName);
+    }
 
     public virtual void onDestroy() {
         destroyCard();
@@ -241,6 +243,17 @@ public class Card : MonoBehaviour
 
         power = newPower;
         updatePowerText();
+    }
+
+    private void removePowerMods(string nameToRemove) {
+        for (int i=0; i<mods.Count; i++) {
+            PowerUtils.Modifier mod = mods[i];
+
+            if (mod.getSource() == nameToRemove) {
+                mods.Remove(mod);
+                i--;
+            }
+        }
     }
 
     public bool hasPowerMod(PowerUtils.Modifier mod) {

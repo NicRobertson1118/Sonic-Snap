@@ -10,8 +10,9 @@ public class GammaCard: Card {
     }
     
      public override void onGoing() {
+        base.onGoing();
+
         int oppositeCardsCount = getOpposingCards().Count;
-        List<Card> opposingCards = getOpposingCards();
 
         PowerUtils.Modifier addXPower = new PowerUtils.Modifier("Gamma", "Add", oppositeCardsCount);
 
