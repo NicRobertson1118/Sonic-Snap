@@ -10,17 +10,17 @@ public class ZoneEffectScript : MonoBehaviour
     protected string effectText = "";
     protected PowerUtils.Modifier effect;
 
-    protected ZoneField playerZone;
-    protected ZoneField enemyZone;
+    protected ZoneField whiteZone;
+    protected ZoneField blackZone;
 
     public virtual void Start() {
-        playerZone = this.transform.parent.Find("PlayerZone").GetComponent<ZoneField>();
-        enemyZone = this.transform.parent.Find("EnemyZone").GetComponent<ZoneField>();
+        whiteZone = this.transform.parent.Find("PlayerZone").GetComponent<ZoneField>();
+        blackZone = this.transform.parent.Find("EnemyZone").GetComponent<ZoneField>();
     }
 
     public void updateZone() {
-        playerZone.updateZone();
-        enemyZone.updateZone();
+        whiteZone.updateZone();
+        blackZone.updateZone();
 
         if (isRevealed) {
             onGoing();
@@ -45,11 +45,15 @@ public class ZoneEffectScript : MonoBehaviour
     * Getter Functions *
     *******************/
 
-    public ZoneField getPlayerZone() {
-        return playerZone;
-    }
+    public ZoneField getOtherZone(ZoneField zone) {
+        ZoneField otherZone;
 
-    public ZoneField getEnemyZone() {
-        return enemyZone;
+        if (zone == whiteZone) {
+            otherZone = blackZone;
+        } else {
+            otherZone = whiteZone;
+        }
+
+        return otherZone;
     }
 }

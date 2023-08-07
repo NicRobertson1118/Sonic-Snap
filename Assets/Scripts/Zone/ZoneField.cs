@@ -7,7 +7,6 @@ using TMPro;
 public class ZoneField : MonoBehaviour
 {
     //Main variables
-    public bool isPlayerZone;
     public bool isRevealed = false;
     private int zonePower = 0;
     List<Card> cards = new List<Card>();

@@ -53,7 +53,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2431797957086050185, guid: 5eb288631d953aa4d913f7561a75fa8c, type: 3}
       propertyPath: m_Name
-      value: BasicCard
+      value: GigantoCard
       objectReference: {fileID: 0}
+    - target: {fileID: 3266496184676309221, guid: 5eb288631d953aa4d913f7561a75fa8c, type: 3}
+      propertyPath: artList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266496184676309221, guid: 5eb288631d953aa4d913f7561a75fa8c, type: 3}
+      propertyPath: artList.Array.data[0]
+      value: 
+      objectReference: {fileID: 2800000, guid: b3b55263eca817640a2581c4f23a8ac5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5eb288631d953aa4d913f7561a75fa8c, type: 3}

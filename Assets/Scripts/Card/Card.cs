@@ -264,25 +264,17 @@ public class Card : MonoBehaviour
     protected List<Card> getOtherCards() {
         List<Card> otherCards;
 
-        if (currentZoneField.GetComponent<ZoneField>().isPlayerZone) {
-            otherCards = zoneEffect.getPlayerZone().getOtherCards(this);
-        } else {
-            otherCards = zoneEffect.getEnemyZone().getOtherCards(this);
-        }
+        otherCards = currentZoneField.getOtherCards(this);
 
         return otherCards;
     }
 
     // Returns all cards at the zone opposite of this card's zone
     protected List<Card> getOpposingCards() {
-        List<Card> otherCards;
+        List<Card> opposingCards;
 
-        if (currentZoneField.GetComponent<ZoneField>().isPlayerZone) {
-            otherCards = zoneEffect.getEnemyZone().getCards();
-        } else {
-            otherCards = zoneEffect.getPlayerZone().getCards();
-        }
+        opposingCards = zoneEffect.getOtherZone(currentZoneField).getCards();
 
-        return otherCards;
+        return opposingCards;
     }
 }

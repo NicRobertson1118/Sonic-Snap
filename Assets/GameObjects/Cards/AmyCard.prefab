@@ -75,4 +75,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 508bf3acf65fd154aa801d2c7fbae7d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movable: 0
+  artList:
+  - {fileID: 2800000, guid: ea938c25736ef264daa1684f442f3c00, type: 3}
