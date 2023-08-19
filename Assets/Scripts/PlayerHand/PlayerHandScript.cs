@@ -28,9 +28,9 @@ public class PlayerHandScript : MonoBehaviour
         deck = deckObject.gameObject.GetComponent<PlayerDeckScript>();
     }
 
-    public void drawCard() {
+    public void drawCard(string name = "None") {
         if (canDraw && slots.Count <= 7) {
-            string cardName = deck.drawCard();
+            string cardName = (name == "None") ? deck.drawCard() : name;
 
             GameObject card = Instantiate(cardRegistry.retreiveCard(cardName));
             card.GetComponent<Card>().updateArt("default");

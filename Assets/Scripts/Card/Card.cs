@@ -290,4 +290,12 @@ public class Card : MonoBehaviour
 
         return opposingCards;
     }
+
+    /*******************
+    * Getter Functions *
+    *******************/
+
+    public string getName() {
+        return cardName;
+    }
 }
